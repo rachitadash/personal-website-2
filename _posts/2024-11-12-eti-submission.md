@@ -5,6 +5,7 @@ description: Description of my entry to the ETI (Erasing the Invisible) challeng
 # tags: watermark removal, adverarial examples, diffusion models
 # giscus_comments: true
 date: 2024-11-12
+thumbnail: assets/img/the_great_wave_off.jpg
 citation: true
 featured: true
 
@@ -34,24 +35,6 @@ toc:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
   - name: Takeaways
-
-# Below is an example of injecting additional post-specific styles.
-# If you use this post as a template, delete this _styles block.
-_styles: >
-  .fake-img {
-    background: #bbb;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 12px;
-  }
-  .fake-img p {
-    font-family: monospace;
-    color: white;
-    text-align: left;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-  }
 ---
 
 This post describes an approach developed for the [Erasing the Invisible](https://erasinginvisible.github.io/) challenge at NeurIPS 2024.
