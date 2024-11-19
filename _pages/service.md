@@ -6,7 +6,7 @@ nav_order: 4
 permalink: /service/
 ---
 
-As a researcher, I recognize the importance of reviewer service and take great pride in reviewing for venues and conferences. While the system may not be perfect, I firmly believe it's our responsibility as researchers to contribute and do our part.
+As a researcher, I recognize the importance of reviewer service and take great pride in reviewing for venues and conferences.
 
 ## 2025
 - ICLR
