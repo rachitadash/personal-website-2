@@ -1,0 +1,37 @@
+<div class="talks">
+  {% if site.talks != blank %}
+
+    {% assign talks = site.talks | reverse %}
+    {% assign grouped_talks = talks | group_by_exp: "item", "item.date | date: '%Y'" %}
+    
+    {% for group in grouped_talks %}
+      <h3>{{ group.name }}</h3>
+      <div
+        class="table-responsive"
+        {% if include.limit and site.announcements.scrollable and group.items.size > 3 %}
+          style="max-height: 60vw"
+        {% endif %}
+      >
+        <table class="table table-sm table-borderless">
+          {% for item in group.items %}
+            <tr>
+              <th scope="row" style="width: 10%">{{ item.date | date: '%b %d' }}</th>
+              <td>
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+              </td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% endfor %}
+
+    <hr>
+ 
+    <div class="legend">
+      :bust_in_silhouette: In-person | :computer: Virtual
+    </div>
+
+  {% else %}
+    <p>No talks so far...</p>
+  {% endif %}
+</div>
