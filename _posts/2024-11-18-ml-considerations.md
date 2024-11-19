@@ -5,7 +5,7 @@ description: Lessons and recommendations based on my experiences working on ML p
 # tags: watermark removal, adverarial examples, diffusion models
 # giscus_comments: true
 date: 2024-11-18
-thumbnail: assets/img/the_great_wave_off.jpg
+thumbnail: assets/img/ml_consideration_squirrel.webp
 citation: true
 featured: true
 
