@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Runner-up](https://microsoft.github.io/MICO/) for the MICO challenge (CIFAR track), co-located with SaTML :tada: I've described my approach [here](/blog/2023/mico/)
+[Runner-up](https://microsoft.github.io/MICO/) for the MICO challenge (CIFAR track), co-located with SaTML :tada: I describe my approach [here](/blog/2023/mico/)
