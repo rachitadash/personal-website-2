@@ -3,11 +3,12 @@ layout: distill
 title: Some advice for working on ML projects
 description: Lessons and recommendations based on my experiences working on ML projects (Python in general).
 # tags: watermark removal, adverarial examples, diffusion models
-# giscus_comments: true
 date: 2024-11-18
 thumbnail: assets/img/ml_consideration_squirrel.webp
+published: false
 citation: true
 featured: true
+categories: guide
 
 authors:
   - name: Anshuman Suri

@@ -2,12 +2,15 @@
 layout: distill
 title: My submission to the ETI Challenge
 description: Description of my entry to the ETI (Erasing the Invisible) challenge (co-located with NeurIPS) for watermark-removal.
-# tags: watermark removal, adverarial examples, diffusion models
-# giscus_comments: true
+tags:
+- watermark removal
+- adverarial examples
+- diffusion models
 date: 2024-11-12
 thumbnail: assets/img/the_great_wave_off.jpg
 citation: true
-featured: true
+featured: false
+categories: competition
 
 authors:
   - name: Anshuman Suri
@@ -17,12 +20,6 @@ authors:
 
 bibliography: 2024-11-22-eti-submission.bib
 
-# Optionally, you can add a table of contents to your post.
-# NOTES:
-#   - make sure that TOC names match the actual section names
-#     for hyperlinks within the post to work correctly.
-#   - we may want to automate TOC generation in the future using
-#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
 toc:
   - name: Adversarial Rinsing
   - subsections:

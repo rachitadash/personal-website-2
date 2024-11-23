@@ -1,5 +1,63 @@
 <!doctype html>
 <html>
+
+<!-- Based on https://github.com/iclr-blogposts/2025 -->
+<script>
+  let thunk = () => {
+    let trimIt = (e) => e.trim();
+    let getText = (e) => e.innerText;
+    let splitNameAndFamilyName = (e) => {
+      let splitted = e.split(" ");
+
+      let fnames = splitted.slice(0, -1).join(" ");
+      let lname = splitted.at(-1);
+
+      return [lname, fnames];
+    }
+
+    let authors = Array.from(document.getElementsByClassName("author")).map(getText).map(trimIt).map(splitNameAndFamilyName);
+    let firstAuthorLName = authors[0][0];
+    let affiliationElements = Array.from(document.getElementsByClassName("affiliation")).filter(e => e.nodeName === "P").map(getText).map(trimIt);
+
+    // getting stuff directly from Jekyll
+    let publishedWhen = "{{ page.date | date: '%B %-d, %Y' }}";
+    let title = "{{ page.title }}";
+    let description = "{{ page.description }}";
+
+    let publishedYear = "{{ page.date | date: '%Y' }}";
+    let currentDate = "{{ site.time | date: '%B %-d, %Y' }}";
+
+    {
+      let authorsBibtex = authors.map(e => `${e[0]}, ${e[1]}`).join(" and ");
+      let bibtexTitleShorthand = (firstAuthorLName +
+              publishedYear +
+              title.split(" ").slice(0, 3).join("")
+      ).replace(" ", "").replace(/[\p{P}$+<=>^`|~]/gu, '').toLowerCase().trim();
+      let bibtexTemplate = `
+@article{${bibtexTitleShorthand},
+  author = {${authorsBibtex}},
+  title = {${title}},
+  abstract = {${description}},
+  year = {${publishedYear}},
+  note = {Accessed ${currentDate}},
+  url  = {${window.location.href}}
+}
+  `.trim();
+      document.getElementById("bibtex-box").innerText = bibtexTemplate;
+    }
+  };
+
+  document.addEventListener('readystatechange', function(event) {
+    if (document.readyState === "complete") {
+      thunk();
+    }
+  });
+
+
+
+</script>
+
+
   <head>
     {% include head.liquid %}
     {% if site.enable_medium_zoom %}
@@ -109,6 +167,13 @@
       </d-appendix>
 
       <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
+
+      <d-article id="bibtex-container" class="related highlight">
+      For attribution in academic contexts, you can cite this post as
+      <pre id="bibtex-box">
+        PLACEHOLDER FOR BIBTEX
+      </pre>
+      </d-article>
 
       {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
       {% if site.giscus.repo and page.giscus_comments %}

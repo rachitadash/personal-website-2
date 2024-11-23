@@ -2,20 +2,21 @@
 layout: distill
 title: Running scripts on Rivanna at UVA
 description: A tutorial on how to run scripts on Rivanna (SLURM in general) cluster at UVA, along with some tricks.
-# tags: slurm rivanna guide
+tags:
+- slurm
+- rivanna guide
 # giscus_comments: true
 date: 2022-02-03
 thumbnail: assets/img/uva_rivanna.png
 citation: true
 featured: true
+categories: guide
 
 authors:
   - name: Anshuman Suri
     url: "https://anshumansuri.com/"
     affiliations:
       name: University of Virginia
-
-# bibliography: 2023-01-31-mico.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
