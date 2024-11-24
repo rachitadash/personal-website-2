@@ -168,12 +168,14 @@
 
       <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>
 
-      <d-article id="bibtex-container" class="related highlight">
-      For attribution in academic contexts, you can cite this post as
-      <pre id="bibtex-box">
-        PLACEHOLDER FOR BIBTEX
-      </pre>
-      </d-article>
+      {% if page.citation %}
+        <d-article id="bibtex-container" class="related highlight">
+        For attribution in academic contexts, you can cite this post as
+        <pre id="bibtex-box">
+          PLACEHOLDER FOR BIBTEX
+        </pre>
+        </d-article>
+      {% endif %}
 
       {% if site.disqus_shortname and page.disqus_comments %}{% include disqus.liquid %}{% endif %}
       {% if site.giscus.repo and page.giscus_comments %}

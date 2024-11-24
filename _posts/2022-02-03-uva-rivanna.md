@@ -8,7 +8,7 @@ tags:
 # giscus_comments: true
 date: 2022-02-03
 thumbnail: assets/img/uva_rivanna.png
-citation: true
+citation: false
 featured: true
 categories: guide
 

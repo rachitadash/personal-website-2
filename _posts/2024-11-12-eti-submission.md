@@ -4,6 +4,7 @@ title: My submission to the ETI Challenge
 description: Description of my entry to the ETI (Erasing the Invisible) challenge (co-located with NeurIPS) for watermark-removal.
 tags:
 - watermark removal
+- robustness
 - adverarial examples
 - diffusion models
 date: 2024-11-12
