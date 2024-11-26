@@ -3,7 +3,7 @@ layout: distill
 title: "Reassessing EMNLP 2024’s Best Paper: Does Divergence-Based Calibration for Membership Inference Attacks Hold Up?" 
 description: "<strong>TL;DR: No.</strong><br>
 A critical analysis of the EMNLP Best Paper proposing a divergence-based calibration for Membership Inference Attacks (MIAs). We explore its experimental shortcomings, issues with temporally shifted benchmarks, and what this means for machine learning awards."
-date: 2024-11-24
+date: 2024-11-26
 citation: true
 featured: true
 categories: exploration
@@ -17,11 +17,6 @@ authors:
     url: "https://anshumansuri.com/"
     affiliations:
       name: Northeastern University
-  # - name: Zachary Lipton
-  #   url: "https://www.zacharylipton.com/"
-  #   affiliations:
-  #     name: Carnegie Mellon Univeristy
-
 
 bibliography: combined.bib
 
@@ -38,7 +33,7 @@ toc:
   - name: The Problem with Temporally Shifted Benchmarks
   - subsections:
     - name: Why These Benchmarks Are Misleading
-  - name: Reflections on Machine Learning Awards  
+  - name: 'Machine Learning Awards: A Problem of Incentives'
   - name: Conclusion  
 
 ---
@@ -53,11 +48,11 @@ In this post, we critically analyze this shift, and the broader implications of 
 
 ## What is Membership Inference?
 
-Membership Inference Attacks (MIAs) are a useful tool in assessing memorization of training data by a model trained on it. Given a model $D$ samples from some underlying distribution $\mathcal{D}$ and a model $M$ trained on $D$, membership inference <d-cite key="yeom2018privacy"></d-cite> asks the following question:
+Membership Inference Attacks (MIAs) are a useful tool in assessing memorization of training data by a model trained on it. Given a model $$D$$ samples from some underlying distribution $$\mathcal{D}$$ and a model $$M$$ trained on $$D$$, membership inference <d-cite key="yeom2018privacy"></d-cite> asks the following question:
 
-> Was some given record $x$ part of the training dataset $D$, or just the overall distribution $\mathcal{D}$?
+> Was some given record $$x$$ part of the training dataset $$D$$, or just the overall distribution $$\mathcal{D}$$?
 
-The underlying distribution $\mathcal{D}$ is assumed to be large enough to the point where the above test can be reframed as inferring whether $x \in D$ (via access to $M$) or not. In practice, the adversary/auditor starts with some non-member data (data that they know was not part of the training data $D$, but belongs to the same underlying distribution $\mathcal{D}$) and on the basis of some scoring function, generates a distribution of scores for these non-members. A sweep over these values can then yield "thresholds" corresponding to certain false-positive rates (FPRs), which can then be used to evaluate the true-positive rate (TPR) of the approach under consideration.
+The underlying distribution $$\mathcal{D}$$ is assumed to be large enough to the point where the above test can be reframed as inferring whether $$x \in D$$ (via access to $$M$$) or not. In practice, the adversary/auditor starts with some non-member data (data that they know was not part of the training data $$D$$, but belongs to the same underlying distribution $$\mathcal{D}$$) and on the basis of some scoring function, generates a distribution of scores for these non-members. A sweep over these values can then yield "thresholds" corresponding to certain false-positive rates (FPRs), which can then be used to evaluate the true-positive rate (TPR) of the approach under consideration.
 
 It is important to note here that these non-members should be from the **same** underlying distribution. To better understand why this is important, think of a model trained for the binary classification task of distinguishing images of squirrels and groundhogs <d-footnote>Maybe you want to give nuts to squirrels and vegetables to groundhogs </d-footnote>. For this example, let's say this particular groundhog image was part of the training data, but the other two weren't.
 
@@ -146,10 +141,14 @@ This situation raises important questions about the role of awards in machine le
 2. **Harming the Field**: Awards that celebrate flawed work set a bad precedent and can mislead the community into thinking these methods are the gold standard.  
 3. **Losing Credibility**: Over time, the reputation of awards themselves suffers, as researchers may start viewing them as less meaningful.  
 
-If awards are to truly highlight excellence, they must emphasize thoroughness, reproducibility, and robustness over surface-level novelty.  
+This is a growing problem in machine learning research, where not only acceptance but even awards are constantly under [scrutiny](https://www.reddit.com/r/MachineLearning/comments/w4ooph/d_icml_2022_outstanding_paper_awards/) for their [soundness](https://parameterfree.com/2023/08/30/yet-another-icml-award-fiasco/), let alone their contribution. If awards are to truly highlight excellence, they must emphasize thoroughness, reproducibility, and robustness over surface-level novelty.
 
 ## Conclusion  
 
 The EMNLP 2024 Best Paper sought to address a pressing challenge in membership inference but falls short under careful scrutiny. The proposed method fails both in distinguishing members and non-members under rigorous conditions and in avoiding false positives when the data is untrained. Furthermore, its reliance on **PatentMIA** exemplifies a larger issue with using temporally shifted benchmarks to claim progress.  
 
 For the field to advance meaningfully, greater emphasis must be placed on rigorous evaluation practices. Awards should reflect this by rewarding work with robust and thorough evaluations, rather than methods that (knowingly or otherwise) exploit well-known flaws in evaluation practices. Only then can we ensure that the field moves forward in a meaningful way.
+
+#### Acknowledgements
+
+We would like to thank [Zack Lipton](https://www.zacharylipton.com/) and [Zico Kolter](https://zicokolter.com/) for their helpful feedback on the draft and for referring us to Nicholas’s <d-cite key="carlini2019ami"></d-cite> example of good criticism.
