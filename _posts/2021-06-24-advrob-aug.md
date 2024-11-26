@@ -20,7 +20,7 @@ authors:
     affiliations:
       name: University of Virginia
 
-bibliography: 2021-06-24-adv-rob-aug.bib
+bibliography: combined.bib
 
 toc:
   - name: Overview

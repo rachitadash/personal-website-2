@@ -19,7 +19,7 @@ authors:
     affiliations:
       name: Northeastern University
 
-bibliography: 2024-11-22-eti-submission.bib
+bibliography: combined.bib
 
 toc:
   - name: Adversarial Rinsing

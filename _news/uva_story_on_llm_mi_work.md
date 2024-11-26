@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-:newspaper: UVA Engineering [covered a story](https://engineering.virginia.edu/news-events/news/common-way-test-leaks-large-language-models-may-be-flawed) on our work on evaluating [Membership Inference Attacks Work on Large Language Models?](https://arxiv.org/pdf/2402.07841).
+:newspaper: UVA Engineering [covered a story](https://engineering.virginia.edu/news-events/news/common-way-test-leaks-large-language-models-may-be-flawed) on our work on evaluating [Membership Inference Attacks on Large Language Models?](https://arxiv.org/pdf/2402.07841).
