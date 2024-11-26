@@ -46,7 +46,7 @@ Our department has a nice collection of 16 servers, each with 4 GPUs. While this
 
 The structure for these environments here is pretty similar to what we have for the CS servers. You can load up specific modules using `module load`. Since sbatch files get passed onto in a new bash environment, it's always a good idea to have all your `module load` and other related commands (like `conda activate`) in your `.bashrc` file so that you don't have to worry about adding all of them to every sbatch file.
 
-For referencem, here's what I added to my `.bashrc`:
+For reference, here's what I added to my `.bashrc`:
 ```bash
 module load singularity
 module load cudatoolkit/11.0.3-py3.8

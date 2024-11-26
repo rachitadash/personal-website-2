@@ -5,7 +5,7 @@ description: Description of my entry to the ETI (Erasing the Invisible) challeng
 tags:
 - watermark removal
 - robustness
-- adverarial examples
+- adversarial examples
 - diffusion models
 date: 2024-11-12
 thumbnail: assets/img/the_great_wave_off.jpg

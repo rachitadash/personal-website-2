@@ -2,7 +2,7 @@
 layout: distill
 title: Some advice for working on ML projects
 description: Lessons and recommendations based on my experiences working on ML projects (Python in general).
-# tags: watermark removal, adverarial examples, diffusion models
+# tags: watermark removal, adversarial examples, diffusion models
 date: 2024-11-18
 thumbnail: assets/img/ml_consideration_squirrel.webp
 published: false
@@ -56,7 +56,7 @@ blah blah blah
 
 blah blah blah
 
-# Evaluationg
+# Evaluations
 
 blah blah blah
 
