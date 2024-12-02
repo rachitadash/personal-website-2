@@ -10,6 +10,7 @@ As a researcher, I recognize the importance of reviewer service and take great p
 
 ## 2025
 - ICLR
+- [AAAI Workshop on Privacy-Preserving Artificial Intelligence](https://ppai-workshop.github.io/)
 
 ## 2024
 - NeurIPS
