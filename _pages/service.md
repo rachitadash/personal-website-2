@@ -14,6 +14,7 @@ As a researcher, I recognize the importance of reviewer service and take great p
 - ICML Position Papers
 - [AAAI Workshop on Privacy-Preserving Artificial Intelligence](https://ppai-workshop.github.io/)
 - [ICLR Workshop 'Will Synthetic Data Finally Solve the Data Access Problem?'](https://synthetic-data-iclr.github.io/) 
+- [The First Workshop on Large Language Model Memorization, ACL](https://sites.google.com/view/memorization-workshop/home)
 
 ## 2024
 - NeurIPS

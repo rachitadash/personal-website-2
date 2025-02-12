@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Georgios](https://www.georgios.wiki/) will be presenting our work on [defending against backdoors in FL]() at [New England Systems Day](https://khoury-srg.github.io/nesd25/).
+[Georgios](https://www.georgios.wiki/) will be presenting our [work](https://arxiv.org/abs/2502.07011) on [defending against backdoors in FL]() at [New England Systems Day](https://khoury-srg.github.io/nesd25/).
