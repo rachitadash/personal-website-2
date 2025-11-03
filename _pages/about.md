@@ -17,6 +17,3 @@ social: true # includes social icons at the bottom of the page
 I am a final-year Chemistry Ph.D. candidate at the [University of Virginia](https://chemistry.as.virginia.edu/). My research focuses on developing and applying methodologies to assess the accumulation of small molecules and peptides across cellular surfaces.
 
 I possess a strong background in solid-phase peptide synthesis (especially in synthesizing macrocyclic peptides), flow cytometry, high-performance liquid chromatography (HPLC), MALDI-TOF, SDS-PAGE, protein expression, and click chemistry among other skills.
-
-
-> I am actively seeking positions starting 2026. Let's connect!
