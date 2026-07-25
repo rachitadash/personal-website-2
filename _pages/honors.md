@@ -6,6 +6,8 @@ nav_order: 4
 permalink: /honors/
 ---
 
+- Graduate Academic Excellence Award by the International Studies Office at UVA, 2026
+
 - Received The Dr. Elizabeth A. Schram Award for the 2025 Young Investigator Poster Competition at the American Peptide Symposium (APS)
 
 - Hunt Fellowship from the UVA Department of Chemistry for the 2025-2026 academic year.
